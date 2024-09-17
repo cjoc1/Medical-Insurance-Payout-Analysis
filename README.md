@@ -11,8 +11,6 @@ Insights and recommendations are provided on the following key areas:
 - **Category 3:** Familial status: An analysis examining how the number of dependents (children) covered under the insurance plan affects an individual's total medical expenses.
   
 
-The SQL queries used to inspect and clean the data for this analysis can be found here [link].
-
 Targed SQL queries regarding various business questions can be found here [link].
 
 An interactive Tableau dashboard used to report and explore sales trends can be found here [link].
@@ -21,13 +19,10 @@ An interactive Tableau dashboard used to report and explore sales trends can be 
 
 # Data Structure & Initial Checks
 
-The companies main database structure as seen below consists of four tables: table1, table2, table3, table4, with a total row count of X records. A description of each table is as follows:
-- **Table 2:**
-- **Table 3:**
-- **Table 4:**
-- **Table 5:**
+The companies main database structure as seen below consists of a table with 6 variables: age, sex, bmi, children, smoker and region.
 
-[Entity Relationship Diagram here]
+![image](https://github.com/user-attachments/assets/3afbecdf-924b-44b3-9691-da4867e9b084)
+
 
 
 
