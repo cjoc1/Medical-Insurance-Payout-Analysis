@@ -1,12 +1,15 @@
 # Project Background
-Backround about the company, including the industry, active years, business model, and key business metrics. Explain this from the POV of a data analyst who is working at the company.
+
+ACME Health Insurance, established in 2013, is a commercial provider offering a variety of health plans to individuals and families. The company operates on a fee-for-service model, paying healthcare providers a set fee for each service rendered to policyholders.
+
+This project analyzes data on beneficiaries currently enrolled in the insurance plan, with features indicating patient characteristics and total medical expenses charged for the year. The goal is to thoroughly analyze and synthesize this data to uncover actionable insights that improve ACME Health Insurance’s operations.
 
 Insights and recommendations are provided on the following key areas:
 
-- **Category 1:** 
-- **Category 2:** 
-- **Category 3:** 
-- **Category 4:** 
+- **Category 1:** Demographic factors: Exploring how demographic factors (age, sex, and region) influence the total medical expenses charged to the insurance plan.
+- **Category 2:** Lifestyle Factors: Analyzing the impact of lifestyle factors, such as BMI and smoking status on total medical expenses charged to the plan for the calendar year.
+- **Category 3:** Familial status: An analysis examining how the number of dependents (children) covered under the insurance plan affects an individual's total medical expenses.
+  
 
 The SQL queries used to inspect and clean the data for this analysis can be found here [link].
 
