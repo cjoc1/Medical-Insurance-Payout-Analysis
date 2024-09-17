@@ -21,7 +21,8 @@ An interactive Tableau dashboard used to report and explore sales trends can be 
 
 The companies main database structure as seen below consists of a table with 6 variables: age, sex, bmi, children, smoker and region.
 
-![image](https://github.com/user-attachments/assets/3afbecdf-924b-44b3-9691-da4867e9b084)
+![image](https://github.com/user-attachments/assets/a46771f0-7849-4f42-ad71-eec3c0619cef)
+
 
 
 
