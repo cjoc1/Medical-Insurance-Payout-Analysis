@@ -1,6 +1,6 @@
---Business Questions 
---Stat Description
--- Category 1: Demographic Factors(age , sexed region)
+-- Business Questions 
+-- Stat Description 
+-- Category 1: Demographic Factors (age, sex, region)
 SELECT
     COUNT(*) AS total_count,
     AVG(charges) AS average,
@@ -34,19 +34,21 @@ Note: Medical expense increases as the age increases.
 */
 
 /*
-2. How does sex affect the medical expenses charged?*/
+2. How does sex affect the medical expenses charged?
+*/
 SELECT
     CASE
         WHEN sex = 'female' THEN 'female'
         WHEN sex = 'male' THEN 'male'
-        else 'other'
+        ELSE 'other'
     END AS sex_group,
     AVG(charges) AS avg_expense
 FROM insurance
-GROUP BY sex_group
+GROUP BY sex_group;
 
-
-/* What are the total medical expenses based on both sex and age group?*/
+/*
+What are the total medical expenses based on both sex and age group?
+*/
 SELECT
     CASE
         WHEN age BETWEEN 18 AND 25 THEN '18-25'
@@ -66,16 +68,16 @@ GROUP BY age_group, sex_group
 ORDER BY age_group, sex_group;
 
 /*
-Note: NOT a large difference, however the medical expense is higher for males than females
+Note: Not a large difference, however, the medical expense is higher for males than females.
 */
 
-/*What is the total medical expense charged for each region?*/
+/* What is the total medical expense charged for each region? */
 SELECT DISTINCT region
 FROM insurance;
 
-/*Note: Ranked highest to lowest expenses: southeast, northeast, northwest and southwest*/  
+/* Note: Ranked highest to lowest expenses: southeast, northeast, northwest, and southwest */
 
-/*What are the total medical expenses based on age group, sex, and region? */  
+/* What are the total medical expenses based on age group, sex, and region? */
 SELECT
     CASE
         WHEN age BETWEEN 18 AND 25 THEN '18-25'
@@ -93,15 +95,16 @@ SELECT
         WHEN region = 'southwest' THEN 'southwest'
         WHEN region = 'southeast' THEN 'southeast'
         WHEN region = 'northwest' THEN 'northwest'
-        WHEN region = 'northeast' THEN 'northeast'   
+        WHEN region = 'northeast' THEN 'northeast'
         ELSE 'other'
     END AS region_group,
     AVG(charges) AS avg_expense
 FROM insurance
 GROUP BY age_group, sex_group, region_group
 ORDER BY age_group, sex_group, region_group, avg_expense DESC;
--- Category 1: Smoking and BMI
-/*What are the total medical expenses based on different BMI groups and smoking statuses?*/
+
+/* Category 1: Smoking and BMI */
+/* What are the total medical expenses based on different BMI groups and smoking statuses? */
 
 SELECT
     CASE
@@ -114,7 +117,7 @@ FROM insurance
 GROUP BY smoker_status
 ORDER BY smoker_status DESC, ave_expense DESC;
 
-/* Smokers ’s expense were 3.8 times higher than non-smokers*/ 
+/* Smokers' expenses were 3.8 times higher than non-smokers */
 
 SELECT
     CASE
@@ -127,11 +130,12 @@ SELECT
 FROM insurance
 GROUP BY bmi_group
 ORDER BY ave_expense DESC;
-/* The higher the BMI the higher the expenses*/
--- Category 1: Familial Status
-/*What are the total medical expenses for policies with no children versus those with children?*/
-SELECT 
-    CASE 
+/* The higher the BMI, the higher the expenses */
+
+/* Category 1: Familial Status */
+/* What are the total medical expenses for policies with no children versus those with children? */
+SELECT
+    CASE
         WHEN children >= 1 THEN 'Have Children'
         WHEN children = 0 THEN 'No Children'
         ELSE 'NA'
@@ -140,10 +144,11 @@ SELECT
 FROM insurance
 GROUP BY familial_status
 ORDER BY ave_expense DESC;
-/*polices with children cost more than no children*/
 
-/*How do the age groups of parents affect the number of visits and, consequently, the total medical expenses?*/
-SELECT 
+/* Policies with children cost more than those with no children */
+
+/* How do the age groups of parents affect the number of visits and, consequently, the total medical expenses? */
+SELECT
     CASE
         WHEN age BETWEEN 18 AND 25 THEN '18-25'
         WHEN age BETWEEN 26 AND 34 THEN '26-34'
@@ -151,13 +156,14 @@ SELECT
         WHEN age BETWEEN 45 AND 55 THEN '45-55'
         ELSE '56+'
     END AS age_group,
-    CASE 
+    CASE
         WHEN children >= 1 THEN 'Have Children'
         WHEN children = 0 THEN 'No Children'
         ELSE 'NA'
     END AS familial_status,
     AVG(charges) AS ave_expense
 FROM insurance
-GROUP BY familial_status,age_group
+GROUP BY familial_status, age_group
 ORDER BY familial_status, ave_expense DESC;
-/*Previosuly, as the age increase orderly, the expense increase. However within age groups with children, the age group is increasing in non-orderly. Ranking(highest to lowest): 56+, 45-55, 35-44, 18-25, 26-34 */
+
+/* Previously, as the age increased orderly, the expense increased. However, within age groups with children, the age group is increasing in a non-orderly manner. Ranking (highest to lowest): 56+, 45-55, 35-44, 18-25, 26-34 */
