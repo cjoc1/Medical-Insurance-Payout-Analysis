@@ -13,7 +13,7 @@ Insights and recommendations are provided on the following key areas:
 
 Targed SQL queries regarding various business questions can be found here [[link]](https://github.com/cjoc1/Medical-Insurance-Payout-Analysis/blob/main/insurance.sql).
 
-An interactive Tableau dashboard used to report and explore sales trends can be found here [link].
+An interactive Tableau dashboard used to report and explore sales trends can be found here [[link]](https://public.tableau.com/views/ACMEHealthInsuranceAnalysis/Sheet32?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link).
 
 
 
