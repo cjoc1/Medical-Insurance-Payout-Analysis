@@ -11,7 +11,7 @@ Insights and recommendations are provided on the following key areas:
 - **Category 3:** Familial status: An analysis examining how the number of dependents (children) covered under the insurance plan affects an individual's total medical expenses.
   
 
-Targed SQL queries regarding various business questions can be found here [link].
+Targed SQL queries regarding various business questions can be found here [[link]](https://github.com/cjoc1/Medical-Insurance-Payout-Analysis/blob/main/insurance.sql).
 
 An interactive Tableau dashboard used to report and explore sales trends can be found here [link].
 
