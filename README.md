@@ -32,8 +32,11 @@ The companies main database structure as seen below consists of a table with 6 v
 ### Overview of Findings
 
 Explain the overarching findings, trends, and themes in 2-3 sentences here. This section should address the question: "If a stakeholder were to take away 3 main insights from your project, what are the most important things they should know?" You can put yourself in the shoes of a specific stakeholder - for example, a marketing manager or finance director - to think creatively about this section.
+Overall, for year 2013 ACME Health Insurance revenue was $17,755,825 and the average payout was $13270. Below is the overview page from the Tableau dashboard and more examples are included throughout the report. The entire interactive dashboard can be downloaded here .
 
-[Visualization, including a graph of overall trends or snapshot of a dashboard]
+![image](https://github.com/user-attachments/assets/5f3f2a1e-2bf0-4160-9ee9-03178828846a)
+
+
 
 
 
